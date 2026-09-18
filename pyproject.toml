@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ocr-factura-reader"
+version = "0.1.0"
+description = "Extractor robusto de equipos desde facturas PDF de renta de impresoras"
+requires-python = ">=3.12"
+dependencies = [
+  "pdfplumber>=0.11.0",
+]
+
+[project.optional-dependencies]
+ocr = ["pytesseract>=0.3.13", "pdf2image>=1.17.0", "Pillow>=10.0"]
+tables = ["camelot-py>=0.11.0", "tabula-py>=2.9.0"]
+test = ["pytest>=8.0"]
+all = ["ocr-factura-reader[ocr,tables,test]"]
+
+[project.scripts]
+ocr-factura = "ocr_factura_reader.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,14 @@
+{
+  "model_pattern": "(?:(?:MX|MFC|MFCL|DCPL|WF|B)[A-Z0-9-]*[0-9][A-Z0-9-]*|303W)",
+  "row_pattern": "(?P<maquina>[\\d,]+)\\s+(?P<modelo>{MODEL})\\s+(?P<numero_serie>[A-Z0-9]+)\\s+(?P<ubicacion_departamento>.+?)\\s+(?P<lectura_anterior>[\\d,]+)\\s+(?P<lectura_actual>[\\d,]+)\\s+(?P<credito>[\\d,]+)\\s+(?P<paginas_procesadas>[\\d,]+)\\s+(?P<tipo_servicio>PP\\s+(?:BYN|COLOR))",
+  "service_values": ["PP BYN", "PP COLOR"],
+  "model_aliases": {
+    "303W": "MX-C303W"
+  },
+  "location_continuations": ["recaudacion"],
+  "invoice_date_pattern": "Fecha y hora de emisión:.*?(?P<date>\\d{4}-\\d{2}-\\d{2})",
+  "invoice_folio_pattern": "(?P<folio>[A-Z]{2,}[A-Z0-9]*-\\d+)",
+  "minimum_text_chars_per_page": 40,
+  "max_reading_delta_ratio": 1.15,
+  "allow_zero_readings": true
+}

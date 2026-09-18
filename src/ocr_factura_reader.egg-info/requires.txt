@@ -1,0 +1,16 @@
+pdfplumber>=0.11.0
+
+[all]
+ocr-factura-reader[ocr,tables,test]
+
+[ocr]
+pytesseract>=0.3.13
+pdf2image>=1.17.0
+Pillow>=10.0
+
+[tables]
+camelot-py>=0.11.0
+tabula-py>=2.9.0
+
+[test]
+pytest>=8.0

@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: ocr-factura-reader
+Version: 0.1.0
+Summary: Extractor robusto de equipos desde facturas PDF de renta de impresoras
+Requires-Python: >=3.12
+Requires-Dist: pdfplumber>=0.11.0
+Provides-Extra: ocr
+Requires-Dist: pytesseract>=0.3.13; extra == "ocr"
+Requires-Dist: pdf2image>=1.17.0; extra == "ocr"
+Requires-Dist: Pillow>=10.0; extra == "ocr"
+Provides-Extra: tables
+Requires-Dist: camelot-py>=0.11.0; extra == "tables"
+Requires-Dist: tabula-py>=2.9.0; extra == "tables"
+Provides-Extra: test
+Requires-Dist: pytest>=8.0; extra == "test"
+Provides-Extra: all
+Requires-Dist: ocr-factura-reader[ocr,tables,test]; extra == "all"

@@ -1,0 +1,2 @@
+[console_scripts]
+ocr-factura = ocr_factura_reader.cli:main
