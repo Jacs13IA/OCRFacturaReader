@@ -55,6 +55,10 @@ Para procesar un PDF individual y elegir el nombre manualmente:
 ocr-factura factura.pdf -o equipos.csv --config config/patterns.json
 ```
 
+```powershell
+py -3.12 -m ocr_factura_reader.cli .\facturas  
+```
+
 ## Validación
 
 Se rechazan filas sin modelo, serie, ubicación, tipo de servicio permitido o números válidos; se comprueba que `lectura_actual >= lectura_anterior` y que el delta coincide con `paginas_procesadas` dentro del margen configurado. El margen admite diferencias reales de contadores, pero evita capturar totales fiscales como filas.
